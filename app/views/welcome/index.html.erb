@@ -1,2 +1,8 @@
 <h1>Welcome To The ToDo App</h1>
 <p>What is your plan for the day ...</p>
+
+<ul class="">
+  <% @tasks.each do |task|%>
+    <li><%= task %></li>
+    <%end%>
+</ul>
