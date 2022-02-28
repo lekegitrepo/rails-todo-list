@@ -1,7 +1,12 @@
 <h1>Tasks#index</h1>
 <ul class="">
   <% @tasks.each do |task|%>
-    <li><%= task %></li>
+    <li>
+      <p>
+        <h3><strong><%= task.title %></strong></h3>
+        <p><em><%= task.description %></em></p>
+      </p>
+    </li>
     <%end%>
 </ul>
 
