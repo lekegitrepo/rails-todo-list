@@ -17,6 +17,10 @@ class TasksController < ApplicationController
     @task = Task.find_by(id: params[:id])
   end
 
+  def show
+    @task = Task.find_by(id: params[:id])
+  end
+
   def update
     @task = Task.find_by(id: params[:id])
     @task.update(task_params)
