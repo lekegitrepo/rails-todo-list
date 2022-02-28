@@ -1,19 +1,3 @@
 <h1>Edit Task</h1>
 
-<section>
-  <%= form_for @task do |f| %>
-    <div>
-      <p>
-        <%= f.label :title %>
-        <div><%= f.text_field :title %></div>
-      </p>
-      <p>
-        <%= f.label :description %>
-        <div><%= f.text_area :description %></div>
-      </p>
-      <p><%= f.submit %>
-    </div>
-  <% end %>
-
-  <p><%= link_to 'Back to task page', tasks_path %></p>
-</section>
+<%= render 'form' %>
