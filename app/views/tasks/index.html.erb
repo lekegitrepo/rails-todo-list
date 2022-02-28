@@ -1,4 +1,4 @@
-<h1>Tasks#index</h1>
+<h1>List of Available Tasks</h1>
 <ul class="">
   <% @tasks.each do |task|%>
     <li>
@@ -6,6 +6,7 @@
         <h3><strong><%= task.title %></strong></h3>
         <p><em><%= task.description %></em></p>
       </p>
+      <%= link_to 'Edit task', edit_task_path(task)%>
     </li>
     <%end%>
 </ul>
