@@ -8,9 +8,9 @@
 User.create([{username: 'Kyle', password: 'xyzenas'}, {username: 'Marcos', password: 'xyzenas'}])
 
 Task.create([
-  {title: 'Mow the lawn', description: 'Mow the backyard lawn and the sides of the house', completed: false},
-  {title: 'Read', description: 'Read text books and story books', completed: false},
-  {title: 'Exercise', description: 'Engage in some aerobic exercises', completed: true},
-  {title: 'Tutorial', description: 'Complete some the online course modules', completed: false},
-  {title: 'Evening movies', description: "Watch movies in the evening after I've completed my tasks", completed: true}
+  {title: 'Mow the lawn', description: 'Mow the backyard lawn and the sides of the house', completed: false, user: User.first},
+  {title: 'Read', description: 'Read text books and story books', completed: false, user: User.first},
+  {title: 'Exercise', description: 'Engage in some aerobic exercises', completed: true, user: User.second},
+  {title: 'Tutorial', description: 'Complete some the online course modules', completed: false, user: User.first},
+  {title: 'Evening movies', description: "Watch movies in the evening after I've completed my tasks", completed: true, user: User.second}
 ])
