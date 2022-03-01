@@ -3,8 +3,12 @@
   <p><em><%= @task.description %></em></p>
   <span>
     <%= link_to 'Edit task', edit_task_path(@task)%>
+    <%= link_to check_box_tag(:task, :completed, @task.completed),
+      "/tasks/#{@task.id}/complete/#{!@task.completed}" %>
   </span>
-  <%= button_to 'Delete task', task_path(@task), method: :delete, action: 'destroy' %>
+  <p>
+    <%= button_to 'Delete task', task_path(@task), method: :delete, action: 'destroy' %>
+  </p>
 </p>
 
 <%= link_to 'Back to the tasks', tasks_path %>

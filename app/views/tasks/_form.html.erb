@@ -22,7 +22,13 @@
         <%= f.label :description %>
         <div><%= f.text_area :description %></div>
       </p>
-      <p><%= f.submit %>
+      <% if request.path.include?('edit') %>
+        <p>
+          <%= f.label :completed %>
+          <%= f.check_box :completed %>
+        </p>
+      <% end %>
+      <p><%= f.submit %></p>
     </div>
   <% end %>
 
