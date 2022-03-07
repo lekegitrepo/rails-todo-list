@@ -9,6 +9,11 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
 
+    
+  </head>
+
+  <body>
+
     <h1>To Do</h1>
 
     <p style="color: green"><%= notice %></p>
@@ -19,9 +24,6 @@
     <% else %>
       <%= link_to 'Log In', :login %> or <%= link_to 'Sign Up', :signup %>
     <% end %>
-  </head>
-
-  <body>
     <%= yield %>
   </body>
 </html>
